@@ -1,0 +1,6 @@
+build/
+.venv/
+voice/.venv/
+voice/models/
+__pycache__/
+.DS_Store

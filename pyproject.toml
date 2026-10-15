@@ -1,0 +1,20 @@
+[project]
+name = "severance"
+version = "0.1.0"
+description = "Песня на голос, музыку и их части, BPM, аккорды для гитары, смена голоса"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pyside6>=6.11",
+    "mlx-audio-separator>=0.1.20",
+    "demucs-mlx>=1.6",
+    "beat-this>=1.1",
+    "soundfile>=0.13",
+    "yt-dlp",
+    "lameenc>=1.8",
+    "lv-chordia @ git+https://github.com/openmirlab/lv-chordia.git",
+    "mlx-whisper>=0.4.3",
+    "pyworld>=0.3.5",
+]
+
+[tool.uv]
+package = false

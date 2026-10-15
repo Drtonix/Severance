@@ -1,0 +1,17 @@
+[project]
+name = "severance-voice"
+version = "0.1.0"
+description = "Смена голоса для Severance: Seed-VC в своём окружении (numpy<2, GPL-3.0)"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "seed-vc==0.4.3",
+    # BigVGAN внутри Seed-VC ждёт старый from_pretrained с proxies и resume_download:
+    # huggingface_hub 1.x их больше не передаёт, а transformers 5 требует 1.x.
+    "huggingface-hub>=0.26,<1.0",
+    "transformers>=4.46,<5",
+    # TitaNet (NeMo, через sherpa-onnx) — второй отпечаток голоса для деления по исполнителям.
+    "sherpa-onnx",
+]
+
+[tool.uv]
+package = false
